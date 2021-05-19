@@ -9,5 +9,8 @@ router.get('/', (req, res, next) => {
 router.get('/grocery-products', (req, res, next) => {
     res.status(200).sendFile(path.join(rootDir, 'views', 'grocery-products.html'))
 })
+router.get('/home-appliance', (req, res, next) => {
+    res.status(200).sendFile(path.join(rootDir, 'views', 'home-appliance.html'))
+})
 
 exports.routes = router
