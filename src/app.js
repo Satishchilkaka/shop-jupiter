@@ -4,20 +4,15 @@ const path = require('path')
 const rootDir = require('./helper/path')
 const indexRoute = require('./routes/index')
 const adminRoute = require('./routes/admin')
-
+const pageNotFound = require('./controller/error')
 app.use(express.static(path.join(__dirname, 'public')))
 
 
-app.set('view engine', 'ejs')
-app.set('views', 'views')
-
+// app.set('view engine', 'ejs')
+// app.set('views', 'views')
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');  
 app.use(indexRoute.routes)
 app.use(adminRoute.router)
-app.use('',(req, res, next) => {
-    res.render('404', {
-        path:'/404',
-        pageTitle: 'Page not found'
-    })
-   // res.status(404).sendFile(path.join(rootDir, 'views', '404.html'))
-})
+app.use(pageNotFound.notFound)
 app.listen(3000)
