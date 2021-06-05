@@ -9,9 +9,5 @@ exports.addProduct = (req,res, next) => {
 
 exports.redirectToShop = (req, res, next) => {
     //  res.render('add-products',)
-  res.redirect('/grocery-products', {
-      path: '/grocery-products',
-      pageTitle: 'grocery-products',
-      activeGroceryProducts: true
-  })
+  res.redirect('grocery-products')
   }
