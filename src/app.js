@@ -5,6 +5,7 @@ const rootDir = require('./helper/path')
 const indexRoute = require('./routes/index')
 const adminRoute = require('./routes/admin')
 const pageNotFound = require('./controller/error')
+const shopRoute = require('./routes/shop')
 app.use(express.static(path.join(__dirname, 'public')))
 
 
@@ -13,5 +14,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');  
 app.use(indexRoute.routes)
 app.use(adminRoute.router)
+app.use(shopRoute.router)
 app.use(pageNotFound.notFound)
 app.listen(3000)
