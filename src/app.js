@@ -6,11 +6,15 @@ const indexRoute = require('./routes/index')
 const adminRoute = require('./routes/admin')
 const pageNotFound = require('./controller/error')
 const shopRoute = require('./routes/shop')
+const bodyParser = require('body-parser')
 app.use(express.static(path.join(__dirname, 'public')))
 
 
 // app.set('views', 'views')
 app.set('views', path.join(__dirname, 'views'));
+
+app.use(bodyParser.urlencoded({extended: false}))
+
 app.set('view engine', 'ejs');  
 app.use(indexRoute.routes)
 app.use(adminRoute.router)
