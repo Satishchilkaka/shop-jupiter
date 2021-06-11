@@ -9,4 +9,4 @@ router.get('/grocery-products', (res, req, next)  => {
     })
 })
 
-module.exports = router
+exports.router = router
