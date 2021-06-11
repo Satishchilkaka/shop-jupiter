@@ -1,4 +1,3 @@
-
 exports.addProduct = (req,res, next) => {
        res.render('add-products', {
          path: '/admin/add-products',
@@ -9,5 +8,10 @@ exports.addProduct = (req,res, next) => {
 
 exports.redirectToShop = (req, res, next) => {
     //  res.render('add-products',)
-  res.redirect('grocery-products')
+  res.status(200)
+  .render('grocery-products', {
+    path:'/grocery-products',
+    pageTitle: 'prod'
+  })
+  console.log(req.body)
   }
