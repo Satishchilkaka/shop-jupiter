@@ -1,3 +1,4 @@
+const productName = []
 exports.addProduct = (req,res, next) => {
        res.render('add-products', {
          path: '/admin/add-products',
@@ -13,5 +14,5 @@ exports.redirectToShop = (req, res, next) => {
     path:'/grocery-products',
     pageTitle: 'prod'
   })
-  console.log(req.body)
+  console.log(JSON.stringify(req.body))
   }
