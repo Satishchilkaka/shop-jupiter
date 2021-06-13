@@ -1,12 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const gShopRoute = require('../controller/shopItems')
 
-router.get('/grocery-products', (res, req, next)  => {
-    res.status(200)
-    .render('grocery-products', {
-        path: 'grocery-products',
-        pageTitle: 'grocery-products'
-    })
-})
+router.get('/grocery-products', gShopRoute.shop )
 
 exports.router = router

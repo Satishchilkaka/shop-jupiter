@@ -1,4 +1,5 @@
 const productName = []
+
 exports.addProduct = (req,res, next) => {
        res.render('add-products', {
          path: '/admin/add-products',
@@ -9,10 +10,16 @@ exports.addProduct = (req,res, next) => {
 
 exports.redirectToShop = (req, res, next) => {
     //  res.render('add-products',)
+    const product = JSON.stringify(req.body)
+  productName.push(product)
   res.status(200)
   .render('grocery-products', {
     path:'/grocery-products',
-    pageTitle: 'prod'
+    pageTitle: 'prod',
+    productName: productName[0]
   })
-  console.log(JSON.stringify(req.body))
+  
+  const pName = productName[0].addProduct
+
   }
+ 
