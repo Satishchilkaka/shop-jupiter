@@ -8,13 +8,12 @@ exports.addProduct = (req,res, next) => {
      })
  }
 
-exports.redirectToShop = (req, res, next) => {
-    //  res.render('add-products',)
-    const product = JSON.stringify(req.body)
+exports.addProductToShop = (req, res, next) => {
+       const product = JSON.stringify(req.body)
   productName.push(product)
   res.status(200)
-  .render('grocery-products', {
-    path:'/grocery-products',
+  .render('shopProducts', {
+    path:'/shopProducts',
     pageTitle: 'prod',
     productName: productName[0]
   })
