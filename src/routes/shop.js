@@ -1,7 +1,8 @@
  const express = require('express')
  const router = express.Router()
-// const gShopRoute = require('../controller/shopItems')
+const myShopRoute = require('../controller/shop')
 
-// router.get('/grocery-products', gShopRoute.shop )
 
-exports.router = router
+router.get('/shop', myShopRoute.myShop)
+
+module.exports = router
