@@ -7,3 +7,14 @@ exports.myShop = (req, res, next)  => {
         activeProducts: true
     })
 }
+
+exports.getMyShopProducts = (req, res, next) => {
+
+    res.status(200)
+    .render('shopProducts', {
+        path: '/shopProducts',
+        pageTitle: 'Products',
+        activeProducts: true
+
+    })
+}
