@@ -1,7 +1,7 @@
 
 exports.myShop = (req, res, next)  => {
-  
-    res.render('shop', {
+  res.status(200)
+    .render('shop', {
         path: '/shop',
         pageTitle: 'My Shop',
         activeProducts: true

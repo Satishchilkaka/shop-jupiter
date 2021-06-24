@@ -5,4 +5,4 @@ const myShopRoute = require('../controller/shop')
 
 router.get('/shop', myShopRoute.myShop)
 
-module.exports = router
+module.exports = router;
