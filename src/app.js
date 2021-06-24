@@ -20,8 +20,9 @@ app.set('view engine', 'ejs');
 
 
 
-app.use(shopRoutes);
+app.use(shopRoutes)
 app.use(adminRoute.router)
+
 // app.use(shopRoute.router)
 app.use(pageNotFound.notFound)
 app.listen(3000)
