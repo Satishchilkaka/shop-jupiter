@@ -19,6 +19,6 @@ exports.addProductToShop = (req, res, next) => {
     })
 
   const pName = productName
-  console.log(pName)
+  //console.log(pName)
 
 }
