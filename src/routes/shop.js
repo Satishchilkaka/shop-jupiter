@@ -1,9 +1,9 @@
- const express = require('express')
- const router = express.Router()
+const express = require('express')
+const router = express.Router()
 const myShopRoute = require('../controller/shop')
 
 
-router.get('/shop', myShopRoute.myShop)
+router.get('/', myShopRoute.myShop)
 
 router.get('/shopProducts', myShopRoute.getMyShopProducts)
 

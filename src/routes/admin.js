@@ -4,8 +4,8 @@ const path = require('path')
 const rootDir = require('../helper/path')
 const addProductsToShop = require('../controller/addProducts')
 
-router.get('/admin/add-products', addProductsToShop.addProduct )
+router.get('/admin/add-products', addProductsToShop.addProduct)
 
-router.post('/grocery-products', addProductsToShop.addProductToShop )
+router.post('/shop-products', addProductsToShop.addProductToShop)
 
-exports.router=router
+exports.router = router

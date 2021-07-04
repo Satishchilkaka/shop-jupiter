@@ -1,10 +1,25 @@
 <header class="main-header">
-    <nav class="main-header__nav">
-        <ul class="main-header__item-list">
-            <li class="main-header__item"><a class="<%= path === '/shop' ? 'active' : '' %>" href="/shop">My Shop</a></li>
-            <li class="main-header__item"><a class="<%- path === '/shopProducts' ? 'active' : '' %>" href="/shopProducts"> Products</a></li>
-                  
-            <li class="main-header__item"><a class="<%= path === '/admin/add-products' ? 'active' : '' %>" href="/admin/add-products">Add Product</a></li>
-        </ul>
-    </nav>
+  <nav class="main-header__nav">
+    <ul class="main-header__item-list">
+      <li class="main-header__item">
+        <a class="<%= path === '/shop' ? 'active' : '' %>" href="/">My Shop</a>
+      </li>
+      <li class="main-header__item">
+        <a
+          class="<%- path === '/shop-products' ? 'active' : '' %>"
+          href="/shop-products"
+        >
+          Products</a
+        >
+      </li>
+
+      <li class="main-header__item">
+        <a
+          class="<%= path === '/admin/add-products' ? 'active' : '' %>"
+          href="/admin/add-products"
+          >Add Product</a
+        >
+      </li>
+    </ul>
+  </nav>
 </header>
